@@ -1,0 +1,74 @@
+table {
+  width: 90%;
+  margin: 30px auto;
+  border-collapse: collapse;
+  font-family: sans-serif;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+ th {
+  background-color: #007bff;
+  color: white;
+  text-align: left;
+  padding: 12px 15px;
+  font-size: 18px;
+  letter-spacing: 0.3px;
+  
+}
+
+td {
+  padding: 10px 15px;
+  border-bottom: 1px solid #ddd;
+  color: #333;
+  font-size: 16px;
+  font-family: sans-serif;
+  
+}
+
+tr:hover {
+  background-color: #f1f8ff;
+}
+
+.btn {
+  background-image: linear-gradient(white,pink);
+  padding: 5px 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+  
+}
+
+.btnedit {
+  background-color:greenyellow;
+  height: 35px;
+  width: 90px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: sans-serif;
+
+}
+.btndel {
+  background-color:palevioletred;
+  height: 35px;
+  width: 90px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+h1{
+    text-align: center;
+    text-decoration: underline;
+    
+    
+}

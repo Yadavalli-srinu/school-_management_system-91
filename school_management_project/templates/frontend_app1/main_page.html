@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="{% static 'CSS/main_page.css' %}">
+</head>
+<body>
+   
+    <div class="bg">
+         <h1>Gowthami Grammar School The Joy Of Learning</h1>
+        <div class="bg1">
+            <button class="btn"> <a href="{% url 'stafftable' %}">Staff</a></button>
+            <button class="btn"><a href="{% url 'studenttable' %}">Student</a></button>
+            <button class="btn"><a href="{% url 'feetable' %}">Fee</a></button
+        </div>
+    </div>
+</body>
+</html>

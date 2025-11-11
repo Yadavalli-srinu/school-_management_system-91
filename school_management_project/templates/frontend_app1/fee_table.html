@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="{% static 'CSS/table.css' %}">
+</head>
+<body>
+    <h1>Fee_Table</h1>
+    <table >
+        <tr>
+            <th>Student_name</th>
+            <th>Amount</th>
+            <th>Status</th>
+            <th>payment_date</th>
+            <th>Edit</th>
+            <th>Del</th>
+            
+        </tr>
+        {% for fee in data %}
+        <tr>
+            <td>{{ fee.student_name }}</td>
+            <td>{{ fee.amount }}</td>
+            <td>{{ fee.status }}</td>
+            <td>{{ fee.payment_date }}</td>
+            <td><button class="btnedit"><a href="{% url 'updatefee' fee.id%}">edit</a></button></td>
+            <td><button class="btndel"><a href="{% url 'deletefee' fee.id %}">del</a></button></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <button class="btn"><a href="{% url 'addfee' %}">Open_Form</a></button>
+</body>
+</html>

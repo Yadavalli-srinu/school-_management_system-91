@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'CSS/table.css' %}">
+</head>
+<body>
+    <h1>STAFF_TABLE</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Mobile</th>
+            <th>Department</th>
+            <th>Salary</th>
+            <th>Hire_date</th>
+            <th>Edit</th>
+            <th>Del</th>
+        </tr>
+        {% for staff in data %}
+        <tr>
+            <td>{{ staff.name }}</td>
+            <td>{{ staff.email }}</td>
+            <td>{{ staff.mobile }}</td>
+            <td>{{ staff.department }}</td>
+            <td>{{ staff.salary }}</td>
+            <td>{{ staff.hire_date }}</td>
+           <td><button class="btnedit"><a href="{% url 'updatestaff' staff.id %}"> Edit</a></button></td>
+           <td><button class="btndel"><a href="{% url 'deletestaff' staff.id %}" > Delete</a></button></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <button class="btn"><a href="{% url 'addstaff' %}">Open_Form</a></button>
+
+   
+</body>
+</html>
